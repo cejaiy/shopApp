@@ -1,11 +1,11 @@
 import React from "react";
 import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity, Image, FlatList} from "react-native";
 import { Ionicons, FontAwesome, AntDesign } from "@expo/vector-icons";
-import { icons, images, SIZES, COLORS, FONTS } from '../constants'
+import { icons,images, SIZES, COLORS, FONTS } from '../constants'
 
 const Home = ({ navigation }) => {
 
-  // Dummy Datas
+ 
 
   const Location = {
       streetName: "Accra",
@@ -568,16 +568,17 @@ const Home = ({ navigation }) => {
               <TouchableOpacity
                   style={{
                       width: 50,
-                      paddingLeft: SIZES.padding * 2,
-                      justifyContent: 'center'
+                      paddingTop: SIZES.padding * 5.0,
+                      justifyContent: 'center',
+                     
                   }}
               >
                   <Image
-                      source={icons.nearby}
+                      source={icons.bluelogo}
                       resizeMode="contain"
                       style={{
-                          width: 30,
-                          height: 30
+                          width: 110,
+                          height: 100
                       }}
                   />
               </TouchableOpacity>
@@ -668,7 +669,7 @@ const Home = ({ navigation }) => {
 
       return (
           <View style={{ padding: SIZES.padding * 2 }}>
-              <Text style={{ ...FONTS.h1 }}>Make Your</Text>
+              <Text style={{ ...FONTS.h1, paddingTop: SIZES.padding * 2.5 }}>Make Your</Text>
               <Text style={{ ...FONTS.h1 }}>Choice</Text>
 
               <FlatList
@@ -689,7 +690,7 @@ const Home = ({ navigation }) => {
               style={{ marginBottom: SIZES.padding * 2 }}
             
               onPress={() => navigation.navigate("ChairDetails", {
-                  item,
+                  item
               })}
           >
               {/* Image */}
@@ -735,7 +736,7 @@ const Home = ({ navigation }) => {
                       flexDirection: 'row'
                   }}
               >
-                  {/* Rating */}
+                  {/* Rates */}
                   <Image
                       source={icons.star}
                       style={{

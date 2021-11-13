@@ -1,14 +1,20 @@
 import React from 'react';
+import { ScrollView, Text } from 'react-native-gesture-handler';
 
-const ChairDetails = ({route}) => {
-  const [chairbrands , setChairbrands] = React.useState(null);
-  const [orderItems, setOrderItems] = React.useState([]);
-  React.useEffect(() => {
-    let { item } = route.params;
+const ChairDetails = ({navigation, route}) => {
+  const item = route.params;
 
-    setChairbrands (item)
-});
+  return (
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{
+        backgroundColor: COLORS.white,
+        paddingBottom: 20,
+      }}>
 
-}
+      </ScrollView>
+);
+
+};
 
 export default ChairDetails;

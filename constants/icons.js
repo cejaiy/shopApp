@@ -23,6 +23,8 @@ export const cart = require("../assets/icons/cart-icon.png");
 export const star = require("../assets/icons/star.png");
 export const parkbench = require("../assets/icons/parkbench.png");
 export const user = require("../assets/icons/user.png");
+export const whitelogo = require("../assets/icons/whitelogo.png");
+export const bluelogo = require("../assets/icons/bluelogo.png");
 
 export default {
     back,
@@ -50,4 +52,6 @@ export default {
     star,
     parkbench,
     user,
+    whitelogo,
+    bluelogo,
 }

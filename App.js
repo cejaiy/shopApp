@@ -64,9 +64,8 @@ export default class AppContainer extends React.Component {
             screenOptions={{ headerShown: false  }}
             initialRouteName = {{Home}}
           >
-            <Stack.Screen name="Home" component={Tabs} />
             <Stack.Screen name="Login" component={Login} />
-            
+            <Stack.Screen name="Home" component={Tabs} />
             <Stack.Screen name="Chair Details " component={ChairDetails} />
             <Stack.Screen name="Cart" component={Cart} />
           </Stack.Navigator>
