@@ -33,11 +33,11 @@ import{useFonts} from 'expo-font';
          <NavigationContainer>
           <Stack.Navigator
             screenOptions={{ headerShown: false  }}
-            initialRouteName = {'Home'}
+            initialRouteName = {'Login'}
           >
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Home" component={Tabs} />
-            <Stack.Screen name="Chair Details " component={ChairDetails} />
+            <Stack.Screen name="ChairDetails" component={ChairDetails} />
             <Stack.Screen name="Cart" component={Cart} />
           </Stack.Navigator>
         </NavigationContainer> 

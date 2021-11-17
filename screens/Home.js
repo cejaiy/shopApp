@@ -7,7 +7,7 @@ const Home = ({ navigation }) => {
   const categoryData = [
       {
           id: 1,
-          name: "Sofa",
+          name: "Sofa Chair",
           icon: icons.sofa,
       },
       {
@@ -60,7 +60,7 @@ const Home = ({ navigation }) => {
       //sofa images
       {
         id: 1,
-          name: "Sofa Chair",
+          name: "Mr. Eddie's Special Sofa Chair",
           rating: 4.5,
           categories: [1],
           priceRating: expensive,
@@ -72,13 +72,13 @@ const Home = ({ navigation }) => {
                 menuId: 1,
                 name: "Sofa Chair",
                 photo: images.sofa3,
-                description: "Highly mentainable SOfa",
+                description: "Highly mentainable Sofa",
                 durability: 95,
                 price: 100
             },
             {
                 menuId: 2,
-                name: "sofa",
+                name: "sofa Chair",
                 photo: images.sofa4,
                 description: "Living Room soft Sofa Chair",
                 durability: 90,
@@ -86,65 +86,65 @@ const Home = ({ navigation }) => {
             },
             {
                 menuId: 3,
-                name: "Sofa CHair",
+                name: "Sofa Chair",
                 photo: images.sofa5,
                 description: "Water-proof Sofa chair",
-                durability: 194,
+                durability: 75,
                 price: 200
             },
             {
                 menuId: 4,
-                name: "Sofa CHair",
+                name: "Sofa Chair",
                 photo: images.sofa6,
                 description: "Soft Sofa chair",
-                durability: 194,
+                durability: 50,
                 price: 200
             },
             {
                 menuId: 5,
-                name: "Sofa CHair",
+                name: "Sofa Chair",
                 photo: images.sofa7,
                 description: "Pure Leather Sofa chair",
-                durability: 194,
+                durability: 70,
                 price: 200
             },
             {
                 menuId: 6,
-                name: "Sofa CHair",
+                name: "Sofa Chair",
                 photo: images.sofa8,
                 description: "Water-proof Sofa chair",
-                durability: 194,
+                durability: 70,
                 price: 200
             },
             {
                 menuId: 7,
-                name: "Sofa CHair",
+                name: "Sofa Chair",
                 photo: images.sofa9,
                 description: "High quality Sofa chair",
-                durability: 194,
+                durability: 88,
                 price: 200
             },
             {
                 menuId: 8,
-                name: "Sofa CHair",
+                name: "Sofa Chair",
                 photo: images.sofa10,
                 description: "Water-proof Sofa chair",
-                durability: 194,
+                durability: 96,
                 price: 200
             },
             {
                 menuId: 9,
-                name: "Sofa CHair",
+                name: "Sofa Chair",
                 photo: images.sofa11,
                 description: "New Sofa chair",
-                durability: 194,
+                durability: 98,
                 price: 200
             }, {
                 menuId: 10,
-                name: "Sofa CHair",
+                name: "Sofa Chair",
                 photo: images.sofa12,
                 description: "luxurous Sofa chair",
-                durability: 194,
+                durability: 1100,
                 price: 200
             },
         ]
@@ -186,7 +186,7 @@ const Home = ({ navigation }) => {
             {
                 menuId: 14,
                 name: "Folding Chair",
-                photo: images.folding5,
+                photo: images.folding1,
                 description: "High quality folding chair",
                 durability: 90,
                 price: 15
