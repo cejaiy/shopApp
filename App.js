@@ -7,6 +7,7 @@ import Login from "./screens/Login";
 import Cart from "./screens/Cart";
 import Tabs from './Navigation/tabs';
 import ChairDetails from "./screens/ChairDetails";
+import SignUp from './screens/SignUp';
 import{useFonts} from 'expo-font';
 
   
@@ -33,10 +34,11 @@ import{useFonts} from 'expo-font';
          <NavigationContainer>
           <Stack.Navigator
             screenOptions={{ headerShown: false  }}
-            initialRouteName = {'Login'}
+            initialRouteName = {'login'}
           >
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Home" component={Tabs} />
+            <Stack.Screen name ="SignUp" component ={SignUp}/>
             <Stack.Screen name="ChairDetails" component={ChairDetails} />
             <Stack.Screen name="Cart" component={Cart} />
           </Stack.Navigator>

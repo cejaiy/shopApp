@@ -14,126 +14,80 @@ export default function SignUp(params) {
       <SplashScreen></SplashScreen>
     </SafeAreaProvider>
 
-
-    <View
-        style={{
-          backgroundColor: COLORS.white,
-          flex: 1,
-          paddingHorizontal: 20,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-      
-       
     <View>
+        <TextInput
 
-        <View >
-        <Text style = {{
-            fontSize: 35,
-            fontFamily:'SemiBold' ,
-            alignSelf: 'center'
-        }}>
-        Sign Up
-        </Text>
+          placeholder={'Full name'}
+          style={{
+            flexDirection:"row",
+            alignItems:"center",
+            marginHorizontal:55,
+            borderWidth:2,
+            marginTop:20,
+            paddingHorizontal:40,
+            borderColor: COLORS.secondary,
+            borderRadius:10,
+            paddingVertical:10,
+            borderWidth:5
+          }}
+          
+        />
+         <TextInput
 
-        </View>
-        <View
-        style = {{
-            flexDirection: "row",
-            alignItems: 'centre',
-            borderWidth: 2,
-            marginHorizontal: 100,
-            paddingHorizontal: 50,
-            paddingVertical: 2,
-            marginTop: 15,
-            borderColor: COLORS.primary,
-            borderRadius: 10,
+          placeholder={'Last name'}
+          style={{
+            flexDirection:"row",
+            alignItems:"center",
+            marginHorizontal:55,
+            borderWidth:2,
+            marginTop:20,
+            paddingHorizontal:40,
+            borderColor: COLORS.secondary,
+            borderRadius:10,
+            paddingVertical:10,
+            borderWidth:5
+          }}
+          
+        />
+         <TextInput
+
+          placeholder={'Email address'}
+          style={{
+            flexDirection:"row",
+            alignItems:"center",
+            marginHorizontal:55,
+            borderWidth:2,
+            marginTop:20,
+            paddingHorizontal:40,
+            borderColor: COLORS.secondary,
+            borderRadius:10,
+            paddingVertical:10,
+            borderWidth:5
+          }}
+          
+        />
 
 
-        }}>
-            <Ionicons name="md-person-circle-sharp" size={24} color= {COLORS.primary} />
-             <TextInput
-             style = {{paddingHorizontal: 10}}
-             placeholder = "Full name"
-             placeholderTextColor = {COLORS.secondary}
-              style = {{paddingHorizontal: 10}}>
-              </TextInput>
+
+        <TextInput
+
+          placeholder={'Password'}
+          secureTextEntry = {true}
+          style={{
+            flexDirection:"row",
+            alignItems:"center",
+            marginHorizontal:55,
+            borderWidth:2,
+            marginTop:5,
+            paddingHorizontal:40,
+            borderColor: COLORS.secondary,
+            borderRadius:10,
+            paddingVertical:10,
+            borderWidth:5
+          }}
+         />
+      </View>
         
-        </View>
-        <View
-        style = {{
-            flexDirection: "row",
-            alignItems: 'centre',
-            borderWidth: 2,
-            marginHorizontal: 100,
-            paddingHorizontal: 50,
-            paddingVertical: 2,
-            marginTop: 15,
-            borderColor: COLORS.primary,
-            borderRadius: 10,
-
-
-        }}>
-            <MaterialCommunityIcons name="email" size={24} color={COLORS.primary} />
-             <TextInput 
-             style = {{paddingHorizontal: 10}}
-             placeholder = "Email"
-             placeholderTextColor = {COLORS.secondary}
-             style = {{paddingHorizontal: 10}}>
-             </TextInput>
-        
-        </View>
-        </View>
-        <View
-        style = {{
-            flexDirection: "row",
-            alignItems: 'centre',
-            borderWidth: 2,
-            marginHorizontal: 100,
-            paddingHorizontal: 50,
-            paddingVertical: 2,
-            marginTop: 15,
-            borderColor: COLORS.primary,
-            borderRadius: 10,
-
-
-        }}>
-             <FontAwesome name="lock" size={24} color={COLORS.primary} /> 
-             <TextInput 
-             secureTextEntry
-             style = {{paddingHorizontal: 10}}
-             placeholder = "Password"
-             placeholderTextColor = {COLORS.secondary}
-             style = {{paddingHorizontal: 10}}
-             >
-             </TextInput>
-        
-        </View>
-        <View
-        style = {{
-            flexDirection: "row",
-            alignItems: 'centre',
-            borderWidth: 2,
-            marginHorizontal: 100,
-            paddingHorizontal: 50,
-            paddingVertical: 2,
-            marginTop: 15,
-            borderColor: COLORS.primary,
-            borderRadius: 10,
-
-
-        }}>
-            <Ionicons name="md-reload-circle-sharp" size={24} color={COLORS.primary} />
-             <TextInput 
-             secureTextEntry
-             style = {{paddingHorizontal: 10}}
-             placeholder = "Re-enter Password"
-             placeholderTextColor = {COLORS.secondary}
-             >
-            </TextInput>
-        
-        </View>
          <TouchableOpacity
           onPress={() => {
             navigation.navigate("Home");
@@ -144,6 +98,7 @@ export default function SignUp(params) {
             paddingVertical: 2,
             marginHorizontal: 150,
             marginTop: 10,
+            marginBottom: 20,
             borderColor: COLORS.primary,
             borderWidth:10,
             borderRadius: 20,
@@ -151,11 +106,10 @@ export default function SignUp(params) {
             backgroundColor: COLORS.primary,
           }}
         >
-          <Text style={{ paddingLeft: 10, color: "white", alignSelf: 'center', fontWeight: "bold" }}>             SIGN UP</Text>
+          <Text style={{ paddingLeft: 110, color: "white", alignSelf: 'center', fontWeight: "bold" }}> SIGN UP</Text>
         </TouchableOpacity>
-    
         </View>
-    </View>
+     
     );
     }
   

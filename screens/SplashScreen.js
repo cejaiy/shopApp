@@ -2,8 +2,8 @@ import React from 'react';
 import {View, Animated, Image, Text } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { COLORS, FONTS} from '../constants';
-import Logo from '../assets/icons/splashimg.png'
-import { color } from 'react-native-reanimated';
+import Logo from '../assets/icons/bluelogo.png'
+
 
 export default function SplashScreen(){
 
@@ -16,7 +16,9 @@ export default function SplashScreen(){
             bottom: 0,
             left: 0, 
             right: 0,
-            backgroundColor: COLORS.primary
+            backgroundColor: COLORS.secondary,
+            borderBottomEndRadius: 40,
+            borderBottomLeftRadius: 40
         }}
         
         >
@@ -32,8 +34,8 @@ export default function SplashScreen(){
                     marginBottom: 20
                 }}
                 ></Image>
-                <Text style = {{ fontSize: 50, fontWeight: 100, color: COLORS.white}} >Interior</Text>
-                <Text style = {{fontSize: 30, fontWeight: 50, color: COLORS.white} }>                   Decs</Text>
+                <Text style = {{ fontSize: 70, fontWeight: 100, color: COLORS.white}} >interior</Text>
+                <Text style = {{fontSize: 70, fontWeight: 100, color: COLORS.white, paddingLeft:300} }>Check</Text>
             </Animated.View>
         </View>
     );

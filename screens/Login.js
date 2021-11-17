@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, ImageBackground, TextInput, TouchableOpacity } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Entypo,MaterialCommunityIcons } from "@expo/vector-icons";
 import { COLORS, images } from '../constants'
 import bgImage from '../assets/images/eggchair7.jpg'
 import { StyleSheet } from "react-native";
@@ -20,10 +20,51 @@ export default function Login(params) {
           alignItems: "center",
         }}
       >
-        <Text style={{ fontSize: 100, color: "grey" }}>Welcome to</Text>
+        <Text style={{ fontSize: 100, color: COLORS.secondary }}>Welcome to</Text>
         <Text style={{ fontSize: 40, fontWeight: "bold",paddingRight:110 }}>interior</Text>
         <Text style={{ fontSize: 40, fontWeight: "bold", paddingLeft: 110 }}>Check</Text>
-        <TouchableOpacity
+    
+         <View>
+        <TextInput
+
+          placeholder={'Username'}
+          style={{
+            flexDirection:"row",
+            alignItems:"center",
+            marginHorizontal:55,
+            borderWidth:2,
+            marginTop:20,
+            paddingHorizontal:40,
+            borderColor: COLORS.secondary,
+            borderRadius:10,
+            paddingVertical:10,
+            borderWidth:5
+          }}
+          
+        />
+
+        <TextInput
+
+          placeholder={'Password'}
+          secureTextEntry = {true}
+          style={{
+            flexDirection:"row",
+            alignItems:"center",
+            marginHorizontal:55,
+            borderWidth:2,
+            marginTop:5,
+            paddingHorizontal:40,
+            borderColor: COLORS.secondary,
+            borderRadius:10,
+            paddingVertical:10,
+            borderWidth:5
+          }}
+         />
+      </View>
+
+      
+      
+      <TouchableOpacity
           onPress={() => {
             navigation.navigate("Home");
           }}
@@ -37,35 +78,10 @@ export default function Login(params) {
             backgroundColor: "black",
           }}
         >
-        
-        
-        
-          <AntDesign name="apple1" size={24} color= {COLORS.primary} />
-          <Text style={{ paddingLeft: 10, color: "orange" }}>Login with Apple ID</Text>
+        <Text style={{ alignSelf:'centre', color: "orange" }}>Login</Text>
         </TouchableOpacity>
-        <Text> or </Text>
+        <Text style= {{alignContent:'center', color:COLORS.primary}}> Don't already have an account? </Text>
          <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("Home");
-          }}
-          style={{
-            padding: 15,
-            paddingHorizontal: 50,
-            marginTop: 10,
-            alignItems: "center",
-            borderRadius: 10,
-            flexDirection: "row",
-            backgroundColor: "grey",
-          }}
-        >
-        
-        
-        
-          <AntDesign name="google" size={24} color={COLORS.primary} />
-          <Text style={{ paddingLeft: 10, color: "black" }}>Login with Google</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
           onPress={() => {
             navigation.navigate("SignUp");
           }}
@@ -79,10 +95,10 @@ export default function Login(params) {
             backgroundColor: "grey",
           }}
         >
-          <Text style={{ paddingLeft: 10, color: "black" }}>SignUp</Text>
-          </TouchableOpacity>
+          <Text style={{ paddingLeft: 10, color: "black" }}>Register Now</Text>
+        </TouchableOpacity>
         </View>
-      </ImageBackground> 
+     </ImageBackground> 
   );
 }
 
