@@ -1,68 +1,39 @@
-import { StatusBar } from "expo-status-bar";
+import 'react-native-gesture-handler';
+import 'react-native-reanimated';
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./screens/Login";
-import SignUp from "./screens/SignUp";
-import Home from "./screens/Home";
 import Cart from "./screens/Cart";
-import AppLoading from 'expo-app-loading';
-import { Asset } from 'expo-asset';
 import Tabs from './Navigation/tabs';
 import ChairDetails from "./screens/ChairDetails";
-import SplashScreen from "./screens/SplashScreen";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import{useFonts} from 'expo-font';
 
-
- 
-function cacheImages(images) {
-    return images.map(image => {
-      if (typeof image === 'string') {
-        return Image.prefetch(image);
-      } else {
-        return Asset.fromModule(image).downloadAsync();
-      }
-    });
-  }
   
-export default class AppContainer extends React.Component {
-  state = {
-    isReady: false,
-  };
-
-  async _loadAssetsAsync() {
-    const imageAssets = cacheImages([
-      
-      require('./assets/images/sofa1.jpg'),
-    ]);
-
-    
-
-    await Promise.all([...imageAssets]);
-  }
-
-  render() {
-    if (!this.state.isReady) {
-      return (
-        <AppLoading
-          startAsync={this._loadAssetsAsync}
-          onFinish={() => this.setState({ isReady: true })}
-          onError={console.warn}
-        />
-      );
-    }
 
    const Stack = createStackNavigator();
+   const App = () => {
+
+    const [loaded] = useFonts({
+      "Roboto-Black" : require('./assets/fonts/Roboto-Black.ttf'),
+      "Roboto-Bold" : require('./assets/fonts/Roboto-Bold.ttf'),
+      "Roboto-Regular" : require('./assets/fonts/Roboto-Regular.ttf'),
+
+    })
+
+    
+    if(!loaded){
+      return null;
+    }
     return (
       
       
-      <View style={{ flex: 1 }}>
+   
           
          <NavigationContainer>
           <Stack.Navigator
             screenOptions={{ headerShown: false  }}
-            initialRouteName = {{Home}}
+            initialRouteName = {'Home'}
           >
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Home" component={Tabs} />
@@ -70,22 +41,6 @@ export default class AppContainer extends React.Component {
             <Stack.Screen name="Cart" component={Cart} />
           </Stack.Navigator>
         </NavigationContainer> 
-      </View> 
-  
-
-    ); 
-  }
+    )
  }
-  
-
-
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+export default App;

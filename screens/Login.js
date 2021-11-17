@@ -2,9 +2,9 @@ import React from "react";
 import { View, Text, ImageBackground, TextInput, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { COLORS, images } from '../constants'
-import bgImage from '../assets/images/armchair3.jpg'
+import bgImage from '../assets/images/eggchair7.jpg'
 import { StyleSheet } from "react-native";
-import { withSafeAreaInsets } from "react-native-safe-area-context";
+
 
 
 export default function Login(params) {
@@ -20,9 +20,9 @@ export default function Login(params) {
           alignItems: "center",
         }}
       >
-        <Text style={{ fontSize: 30, color: "grey" }}>Welcome to</Text>
-        <Text style={{ fontSize: 40, fontWeight: "bold" }}>interiorCheck</Text>
-       
+        <Text style={{ fontSize: 100, color: "grey" }}>Welcome to</Text>
+        <Text style={{ fontSize: 40, fontWeight: "bold",paddingRight:110 }}>interior</Text>
+        <Text style={{ fontSize: 40, fontWeight: "bold", paddingLeft: 110 }}>Check</Text>
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("Home");
@@ -37,6 +37,7 @@ export default function Login(params) {
             backgroundColor: "black",
           }}
         >
+        
         
         
           <AntDesign name="apple1" size={24} color= {COLORS.primary} />
@@ -57,6 +58,7 @@ export default function Login(params) {
             backgroundColor: "grey",
           }}
         >
+        
         
         
           <AntDesign name="google" size={24} color={COLORS.primary} />

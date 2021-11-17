@@ -1,18 +1,9 @@
 import React from "react";
 import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity, Image, FlatList} from "react-native";
-import { Ionicons, FontAwesome, AntDesign } from "@expo/vector-icons";
 import { icons,images, SIZES, COLORS, FONTS } from '../constants'
 
+
 const Home = ({ navigation }) => {
-
- 
-
-  const Location = {
-      streetName: "Accra",
-      
-  
-  }
-
   const categoryData = [
       {
           id: 1,
@@ -59,12 +50,6 @@ const Home = ({ navigation }) => {
           name: "Deck chair",
           icon: icons.deckchair,
       },
-      {
-          id: 10,
-          name: "Park bench",
-          icon: icons.parkbench,
-      },
-
   ]
 
   // Rates
@@ -73,470 +58,667 @@ const Home = ({ navigation }) => {
 
   const chairData = [
       //sofa images
-      { 
-          id: 1,
+      {
+        id: 1,
           name: "Sofa Chair",
           rating: 4.5,
           categories: [1],
           priceRating: expensive,
-          photo: images.sofa1,
+          photo: images.sofa2,
           discount: "5-10% off",
-      },
-         
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa2,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa3,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa4,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa5,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa6,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa7,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa8,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa9,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa10,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa11,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa12,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa13,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa14,
-        discount: "15% off",
-      },
-      {
-        id: 1,
-        name: "Sofa Chair",
-        rating: 4.8,
-        categories: [1],
-        priceRating: affordable,
-        photo: images.sofa15,
-        discount: "15% off",
-      },
-
-      //folding chairs images
-      {
-          id: 2,
-          name: "Folding Chair",
-          rating: 4.8,
-          categories: [2],
-          priceRating: expensive,
-          photo: images.folding,
-          discount: "5% off",  
-      },
-      {
-        id: 2,
-        name: "Folding Chair",
-        rating: 4.8,
-        categories: [2],
-        priceRating: expensive,
-        photo: images.folding1,
-        discount: "5% off",  
-    },
-    {
-        id: 2,
-        name: "Folding Chair",
-        rating: 4.8,
-        categories: [2],
-        priceRating: expensive,
-        photo: images.folding2,
-        discount: "5% off",  
-    },
-    {
-        id: 2,
-        name: "Folding Chair",
-        rating: 4.8,
-        categories: [2],
-        priceRating: expensive,
-        photo: images.folding3,
-        discount: "5% off",  
-    },
-    {
-        id: 2,
-        name: "Folding Chair",
-        rating: 4.8,
-        categories: [2],
-        priceRating: expensive,
-        photo: images.folding4,
-        discount: "5% off",  
-    },
-    {
-        id: 2,
-        name: "Folding Chair",
-        rating: 4.8,
-        categories: [2],
-        priceRating: expensive,
-        photo: images.folding5,
-        discount: "5% off",  
-    },
-    {
-        id: 2,
-        name: "Folding Chair",
-        rating: 4.8,
-        categories: [2],
-        priceRating: expensive,
-        photo: images.folding6,
-        discount: "5% off",  
-    },
-    {
-        id: 2,
-        name: "Folding Chair",
-        rating: 4.8,
-        categories: [2],
-        priceRating: expensive,
-        photo: images.folding7,
-        discount: "5% off",  
-    },
-    {
-        id: 2,
-        name: "Folding Chair",
-        rating: 4.8,
-        categories: [2],
-        priceRating: expensive,
-        photo: images.folding8,
-        discount: "5% off",  
-    },
-    {
-        id: 2,
-        name: "Folding Chair",
-        rating: 4.8,
-        categories: [2],
-        priceRating: expensive,
-        photo: images.folding9,
-        discount: "5% off",  
-    },
-    {
-        id: 2,
-        name: "Folding Chair",
-        rating: 4.8,
-        categories: [2],
-        priceRating: expensive,
-        photo: images.folding10,
-        discount: "5% off",  
-    },
-
-    //egg chair
-      {   id: 3,
-          name: "Egg chair",
-          rating: 4.9,
-          categories: [3],
-          priceRating: affordable,
-          photo: images.eggchair1,
-          discount : "20% off",
-      },
-      {   id: 3,
-        name: "Egg chair",
-        rating: 4.9,
-        categories: [3],
-        priceRating: affordable,
-        photo: images.eggchair3,
-        discount : "20% off",
         
+        menu: [
+            {
+                menuId: 1,
+                name: "Sofa Chair",
+                photo: images.sofa3,
+                description: "Highly mentainable SOfa",
+                durability: 95,
+                price: 100
+            },
+            {
+                menuId: 2,
+                name: "sofa",
+                photo: images.sofa4,
+                description: "Living Room soft Sofa Chair",
+                durability: 90,
+                price: 120
+            },
+            {
+                menuId: 3,
+                name: "Sofa CHair",
+                photo: images.sofa5,
+                description: "Water-proof Sofa chair",
+                durability: 194,
+                price: 200
+            },
+            {
+                menuId: 4,
+                name: "Sofa CHair",
+                photo: images.sofa6,
+                description: "Soft Sofa chair",
+                durability: 194,
+                price: 200
+            },
+            {
+                menuId: 5,
+                name: "Sofa CHair",
+                photo: images.sofa7,
+                description: "Pure Leather Sofa chair",
+                durability: 194,
+                price: 200
+            },
+            {
+                menuId: 6,
+                name: "Sofa CHair",
+                photo: images.sofa8,
+                description: "Water-proof Sofa chair",
+                durability: 194,
+                price: 200
+            },
+            {
+                menuId: 7,
+                name: "Sofa CHair",
+                photo: images.sofa9,
+                description: "High quality Sofa chair",
+                durability: 194,
+                price: 200
+            },
+            {
+                menuId: 8,
+                name: "Sofa CHair",
+                photo: images.sofa10,
+                description: "Water-proof Sofa chair",
+                durability: 194,
+                price: 200
+            },
+            {
+                menuId: 9,
+                name: "Sofa CHair",
+                photo: images.sofa11,
+                description: "New Sofa chair",
+                durability: 194,
+                price: 200
+            }, {
+                menuId: 10,
+                name: "Sofa CHair",
+                photo: images.sofa12,
+                description: "luxurous Sofa chair",
+                durability: 194,
+                price: 200
+            },
+        ]
     },
-    {   id: 3,
-        name: "Egg chair",
-        rating: 4.9,
-        categories: [3],
+    {
+        id: 2,
+        name: "Folding Chair",
+        rating: 4.8,
+        categories: [2],
         priceRating: affordable,
-        photo: images.eggchair4,
-        discount : "20% off",
+        photo: images.folding1,
+        discount: "15% off",
+      
+        menu: [
+            {
+                menuId: 11,
+                name: "Folding Chair",
+                photo: images.folding2,
+                description: "High quality folding chair",
+                durability: 50,
+                price: 15
+            },
+            {
+                menuId: 12,
+                name: "Folding Chair",
+                photo: images.folding3,
+                description: "High quality folding chair",
+                durability: 80,
+                price: 15
+            },
+            {
+                menuId: 13,
+                name: "Folding Chair",
+                photo: images.folding4,
+                description: "High quality folding chair",
+                durability: 100,
+                price: 15
+            },
+            {
+                menuId: 14,
+                name: "Folding Chair",
+                photo: images.folding5,
+                description: "High quality folding chair",
+                durability: 90,
+                price: 15
+            },
+            {
+                menuId: 15,
+                name: "Folding Chair",
+                photo: images.folding6,
+                description: "High quality folding chair",
+                durability: 50,
+                price: 15
+            },
+            {
+                menuId: 16,
+                name: "Folding Chair",
+                photo: images.folding7,
+                description: "High quality folding chair",
+                durability: 50,
+                price: 15
+            },
+            {
+                menuId: 17,
+                name: "Folding Chair",
+                photo: images.folding8,
+                description: "High quality folding chair",
+                durability: 50,
+                price: 15
+            },
+            {
+                menuId: 18,
+                name: "Folding Chair",
+                photo: images.folding9,
+                description: "High quality folding chair",
+                durability: 50,
+                price: 15
+            },
+            {
+                menuId: 19,
+                name: "Folding Chair",
+                photo: images.folding10,
+                description: "High quality folding chair",
+                durability: 50,
+                price: 15
+            },
+            
+        ]
     },
-    {   id: 3,
+    {
+        id: 3,
         name: "Egg chair",
-        rating: 4.9,
+        rating: 4.8,
         categories: [3],
-        priceRating: affordable,
-        photo: images.eggchair5,
-        discount : "20% off",
+        priceRating: expensive,
+        photo: images.eggchair3,
+        discount: "5% off",  
+       
+        menu: [
+            {
+                menuId: 20,
+                name: "Egg chair",
+                photo: images.eggchair3,
+                description: "Outdoor Egg Chair",
+                durability: 100,
+                price: 20
+            },
+            {
+                menuId: 21,
+                name: "Egg chair",
+                photo: images.eggchair4,
+                description: "Summer Egg Chair",
+                durability: 90,
+                price: 20
+            },
+            {
+                menuId: 22,
+                name: "Egg chair",
+                photo: images.eggchair5,
+                description: "Outdoor Egg Chair",
+                durability: 95,
+                price: 20
+            },
+            {
+                menuId: 23,
+                name: "Egg chair",
+                photo: images.eggchair6,
+                description: "Outdoor Egg Chair",
+                durability: 70,
+                price: 50
+            },
+            {
+                menuId: 24,
+                name: "Egg chair",
+                photo: images.eggchair7,
+                description: "Outdoor Egg Chair",
+                durability: 100,
+                price: 20
+            },
+            {
+                menuId: 25,
+                name: "Egg chair",
+                photo: images.eggchair8,
+                description: "Outdoor Egg Chair",
+                durability: 55,
+                price: 40
+            },
+            {
+                menuId: 26,
+                name: "Egg chair",
+                photo: images.eggchair9,
+                description: "Outdoor Egg Chair",
+                durability: 60,
+                price: 89
+            },
+            {
+                menuId: 27,
+                name: "Egg chair",
+                photo: images.eggchair10,
+                description: "Outdoor Egg Chair",
+                durability: 60,
+                price: 33
+            }
+        ]
     },
-    {   id: 3,
-        name: "Egg chair",
-        rating: 4.9,
-        categories: [3],
-        priceRating: affordable,
-        photo: images.eggchair2,
-        discount : "20% off",
-    },
-    {   id: 3,
-        name: "Egg chair",
-        rating: 4.9,
-        categories: [3],
-        priceRating: affordable,
-        photo: images.eggchair6,
-        discount : "20% off",
-    },
-    {   id: 3,
-        name: "Egg chair",
-        rating: 4.9,
-        categories: [3],
-        priceRating: affordable,
-        photo: images.eggchair7,
-        discount : "20% off",
-    },
-    {   id: 3,
-        name: "Egg chair",
-        rating: 4.9,
-        categories: [3],
-        priceRating: affordable,
-        photo: images.eggchair8,
-        discount : "20% off",
-    },
-    {   id: 3,
-        name: "Egg chair",
-        rating: 4.9,
-        categories: [3],
-        priceRating: affordable,
-        photo: images.eggchair9,
-        discount : "20% off",
-    },
-    {   id: 3,
-        name: "Egg chair",
-        rating: 4.9,
-        categories: [3],
-        priceRating: affordable,
-        photo: images.eggchair10,
-        discount : "20% off",
-    },
-
-    //Egg chair images
-    {   id: 4,
+    {
+        id: 4,
         name: "Armchair",
         rating: 4.9,
         categories: [4],
         priceRating: affordable,
         photo: images.armchair1,
         discount : "20% off",
+        
+        menu: [
+            {
+                menuId: 28,
+                name: "Armchair",
+                photo: images.armchair2,
+                description: "High Leather Arm Chair",
+                durability: 90,
+                price: 200
+            },
+            {
+                menuId: 29,
+                name: "Armchair",
+                photo: images.armchair3,
+                description: "Leather Arm chair",
+                durability: 80,
+                price: 150
+            },
+            {
+                menuId: 30,
+                name: "Armchair",
+                photo: images.armchair4,
+                description: "Highly Mentained",
+                durability: 100,
+                price: 400
+            },
+            {
+                menuId: 31,
+                name: "Armchair",
+                photo: images.armchair5,
+                description: "Moderately furnished",
+                durability: 90,
+                price: 250
+            },
+            {
+                menuId: 32,
+                name: "Armchair",
+                photo: images.armchair6,
+                description: "Newly Made",
+                durability: 90,
+                price: 200
+            },
+            {
+                menuId: 33,
+                name: "Armchair",
+                photo: images.armchair7,
+                description: "Water proof",
+                durability: 90,
+                price: 500
+            },
+            {
+                menuId: 34,
+                name: "Armchair",
+                photo: images.armchair9,
+                description: "Decate's Favourite",
+                durability: 90,
+                price: 255
+            },
+            {
+                menuId: 35,
+                name: "Armchair",
+                photo: images.armchair10,
+                description: "Uncle Jones Arm chair",
+                durability: 90,
+                price: 200
+            }
+        ]
     },
-    {   id: 4,
-        name: "Armchair",
-        rating: 4.9,
-        categories: [4],
-        priceRating: affordable,
-        photo: images.armchair2,
-        discount : "20% off",
-    },
-    {   id: 4,
-        name: "Armchair",
-        rating: 4.9,
-        categories: [4],
-        priceRating: affordable,
-        photo: images.armchair3,
-        discount : "20% off",
-    },
-    {   id: 4,
-        name: "Armchair",
-        rating: 4.9,
-        categories: [4],
-        priceRating: affordable,
-        photo: images.armchair4,
-        discount : "20% off",
-    },
-    {   id: 4,
-        name: "Armchair",
-        rating: 4.9,
-        categories: [4],
-        priceRating: affordable,
-        photo: images.armchair5,
-        discount : "20% off",
-    },
-    {   id: 4,
-        name: "Armchair",
-        rating: 4.9,
-        categories: [4],
-        priceRating: affordable,
-        photo: images.armchair6,
-        discount : "20% off",
-    },
-    {   id: 4,
-        name: "Armchair",
-        rating: 4.9,
-        categories: [4],
-        priceRating: affordable,
-        photo: images.armchair7,
-        discount : "20% off",
-    },
-    {   id: 4,
-        name: "Armchair",
-        rating: 4.9,
-        categories: [4],
-        priceRating: affordable,
-        photo: images.armchair8,
-        discount : "20% off",
-    },
-    {   id: 4,
-        name: "Armchair",
-        rating: 4.9,
-        categories: [4],
-        priceRating: affordable,
-        photo: images.armchair9,
-        discount : "20% off",
-    },
-    {   id: 4,
-        name: "Armchair",
-        rating: 4.9,
-        categories: [4],
-        priceRating: affordable,
-        photo: images.armchair10,
-        discount : "20% off",
-    },
-    
     {
         id: 5,
-        name: "Stool Chair",
-        rating: 4.8,
+        name: "Fidels Stool Chair",
+        rating: 4.6,
         categories: [5],
         priceRating: affordable,
-        photo: images.stool2,
-        discount: "15% off",
-    
-
-    
+        photo: images.stool7,
+        discount : "5% off",
+        
+        menu: [
+            {
+                menuId: 36,
+                name: "Stool Chair",
+                photo: images.stool2,
+                description: "Wooden Stool",
+                durability: 70,
+                price: 30
+            },
+            {
+                menuId: 37,
+                name: "Stool Chair",
+                photo: images.stool3,
+                description: "Wooden Stool",
+                durability: 70,
+                price: 30
+            },
+            {
+                menuId: 38,
+                name: "Stool Chair",
+                photo: images.stool4,
+                description: "Wooden Stool",
+                durability: 70,
+                price: 20
+            },
+            {
+                menuId: 39,
+                name: "Stool Chair",
+                photo: images.stool8,
+                description: "Wooden Stool",
+                durability: 70,
+                price: 30
+            },
+            {
+                menuId: 40,
+                name: "Stool Chair",
+                photo: images.stool9,
+                description: "Wooden Stool",
+                durability: 70,
+                price: 30
+            },
             
-      },
-      {
 
-          id: 6,
-          name: "Rocking Chair",
-          rating: 4.9,
-          categories: [6],
-          priceRating: expensive,
-          photo: images.rocking1,
-          discount : "20% off",
-
-      },
-      {
-          id: 7,
-         name: "Stool Chair",
-         rating: 4.8,
-         categories: [7],
-         priceRating: affordable,
-         photo: images.stool2,
-         discount: "15% off",
+        ]
     },
     {
+        id: 6,
+        name: "Daddy Bob's Rocking Chair",
+        rating: 4.9,
+        categories: [6],
+        priceRating: affordable,
+        photo: images.rocking3,
+        discount : "30% off",
+        
+        menu: [
+            {
+                menuId: 41,
+                name: "Rocking Chair",
+                photo: images.armchair3,
+                description: "New Sales",
+                durability: 100,
+                price: 50
+            },
+            {
+                menuId: 42,
+                name: "Rocking Chair",
+                photo: images.armchair4,
+                description: "New Sales",
+                durability: 100,
+                price: 50
+            },
+            {
+                menuId: 43,
+                name: "Rocking Chair",
+                photo: images.armchair5,
+                description: "New Sales",
+                durability: 100,
+                price: 50
+            },
+            {
+                menuId: 44,
+                name: "Rocking Chair",
+                photo: images.armchair6,
+                description: "New Sales",
+                durability: 100,
+                price: 50
+            },
+            {
+                menuId: 45,
+                name: "Rocking Chair",
+                photo: images.armchair7,
+                description: "New Sales",
+                durability: 100,
+                price: 50
+            },
+            {
+                menuId: 46,
+                name: "Rocking Chair",
+                photo: images.armchair8,
+                description: "New Sales",
+                durability: 100,
+                price: 50
+            },
+            {
+                menuId: 47,
+                name: "Rocking Chair",
+                photo: images.armchair9,
+                description: "New Sales",
+                durability: 100,
+                price: 50
+            },
+            {
+                menuId: 48,
+                name: "Rocking Chair",
+                photo: images.armchair10,
+                description: "New Sales",
+                durability: 100,
+                price: 50
+            }
+        ]
+    },
+    {
+        id: 7,
+        name: "Sets of Executive Chairs",
+        rating: 4.9,
+        categories: [7],
+        priceRating: expensive,
+        photo: images.executive10,
+        discount : "20% off",
+        
+        menu: [
+            {
+                menuId: 49,
+                name: "Ececutive Chair sets",
+                photo: images.executive10,
+                description: "High Value Executive Chairs",
+                durability: 95,
+                price: 700
+            },
+            {
+                menuId: 50,
+                name: "Executive Chairs",
+                photo: images.executive1,
+                description: "High Value Executive Chairs",
+                durability: 95,
+                price: 700
+            },
+            {
+                menuId: 51,
+                name: "Executive Chairs",
+                photo: images.executive2,
+                description: "High Value Executive Chairs",
+                durability: 95,
+                price: 700
+            },
+            {
+                menuId: 52,
+                name: "Executive Chair",
+                photo: images.executive3,
+                description: "High Value Executive Chairs",
+                durability: 95,
+                price: 700
+            },
+            {
+                menuId: 53,
+                name: "Executive Chair",
+                photo: images.executive4,
+                description: "High Value Executive Chairs",
+                durability: 95,
+                price: 700
+            },
+            {
+                menuId: 54,
+                name: "Executive Chair",
+                photo: images.executive5,
+                description: "High Value Executive Chairs",
+                durability: 95,
+                price: 700
+            },
+            {
+                menuId: 55,
+                name: "Executive Chair",
+                photo: images.executive6,
+                description: "High Value Executive Chairs",
+                durability: 95,
+                price: 700
+            },
+            {
+                menuId: 56,
+                name: "Executive Chair",
+                photo: images.executive7,
+                description: "High Value Executive Chairs",
+                durability: 95,
+                price: 700
+            },
+            {
+                menuId: 57,
+                name: "Executive Chair",
+                photo: images.executive8,
+                description: "High Value Executive Chairs",
+                durability: 95,
+                price: 700
+            }
+        ]
+    },
+    {
+        
         id: 8,
-        name: "Stool Chair",
-        rating: 4.8,
+        name: "Cuddler Chair",
+        rating: 4.9,
         categories: [8],
-        priceRating: affordable,
-        photo: images.stool2,
-        discount: "15% off",
-      },
-      {
+        priceRating: expensive,
+        photo: images.cuddler3,
+        discount : "20% off",
+     
+        menu: [
+            {
+                menuId: 58,
+                name: "Cuddler Chair",
+                photo: images.cuddler1,
+                description: "Personal Cuddler CHair",
+                durability: 200,
+                price: 35
+            },
+            {
+                menuId: 59,
+                name: "Cuddler Chair",
+                photo: images.cuddler2,
+                description: "Sleep in Cuddler ",
+                durability: 300,
+                price: 40
+            },
+            {
+                menuId: 60,
+                name: "Cuddler Chair",
+                photo: images.cuddler4,
+                description: "Customised",
+                durability: 300,
+                price: 70
+            },
+            {
+                menuId: 61,
+                name: "Cuddler Chair",
+                photo: images.cuddler5,
+                description: "Highly Made",
+                durability: 300,
+                price: 80
+            },
+            {
+                menuId: 62,
+                name: "Cuddler Chair",
+                photo: images.cuddler6,
+                description: "Highly Made",
+                durability: 300,
+                price: 80
+            },
+            {
+                menuId: 63,
+                name: "Cuddler Chair",
+                photo: images.cuddler7,
+                description: "Newly Made",
+                durability: 300,
+                price: 80
+            },
+            {
+                menuId: 64,
+                name: "Cuddler Chair",
+                photo: images.cuddler3,
+                description: "Highly Made",
+                durability: 200,
+                price: 80
+            }
+
+        ]
+    },
+    {
+
         id: 9,
-        name: "Stool Chair",
-        rating: 4.8,
-        categories: [9],
-        priceRating: affordable,
-        photo: images.stool2,
-        discount: "15% off",
-      },
-      {
-        id: 10,
-        name: "Stool Chair",
-        rating: 4.8,
-        categories: [10],
-        priceRating: affordable,
-        photo: images.stool2,
-        discount: "15% off",
-      }
-  ]
+         name: "Special Deck Chair",
+         rating: 4.5,
+         categories: [9],
+         priceRating: expensive,
+         photo: images.deck1,
+         discount: "10.50% off",
+     
+        menu: [
+            {
+                menuId: 65,
+                name: "Deck Chair",
+                photo: images.deck2,
+                description: "Special Made",
+                durability: 100,
+                price: 640
+            },
+            {
+                menuId: 66,
+                name: "Deck Chair",
+                photo: images.deck3,
+                description: "Free Delivery!",
+                durability: 100,
+                price: 500
+            },
+            {
+                menuId: 67,
+                name: "Deck Chair",
+                photo: images.deck4,
+                description: "Highly Furnished",
+                durability: 95,
+                price: 400
+            },
+            {
+                menuId: 68,
+                name: "Deck Chair",
+                photo: images.deck5,
+                description: "Highly Furnished",
+                durability: 95,
+                price: 450
+            }
+        ]
+        
+    }
+
+
+]
 
   const [categories, setCategories] = React.useState(categoryData)
   const [selectedCategory, setSelectedCategory] = React.useState(null)
@@ -545,7 +727,7 @@ const Home = ({ navigation }) => {
 
 
   function onSelectCategory(category) {
-      //filter chairs
+      //chair filtering
       let chairList = chairData.filter(a => a.categories.includes(category.id))
 
       setChairbrands(chairList)
@@ -569,6 +751,7 @@ const Home = ({ navigation }) => {
                   style={{
                       width: 50,
                       paddingTop: SIZES.padding * 5.0,
+                      paddingLeft: SIZES.padding * 1.5,
                       justifyContent: 'center',
                      
                   }}
@@ -577,7 +760,7 @@ const Home = ({ navigation }) => {
                       source={icons.bluelogo}
                       resizeMode="contain"
                       style={{
-                          width: 110,
+                          width: 70,
                           height: 100
                       }}
                   />
@@ -684,16 +867,14 @@ const Home = ({ navigation }) => {
       )
   }
 
-  function renderChairList() {
+  function renderChairbrandList() {
       const renderItem = ({ item }) => (
           <TouchableOpacity
               style={{ marginBottom: SIZES.padding * 2 }}
             
-              onPress={() => navigation.navigate("ChairDetails", {
-                  item
-              })}
+              onPress={() => navigation.navigate("ChairDetails", {item})}
           >
-              {/* Image */}
+              {/* Chair Image */}
               <View
                   style={{
                       marginBottom: SIZES.padding
@@ -803,7 +984,7 @@ const Home = ({ navigation }) => {
       <SafeAreaView style={styles.container}>
           {renderHeader()}
           {renderMainCategories()}
-          {renderChairList()}
+          {renderChairbrandList()}
       </SafeAreaView>
   )
 }

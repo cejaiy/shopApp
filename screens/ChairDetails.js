@@ -1,20 +1,26 @@
-import React from 'react';
-import { ScrollView, Text } from 'react-native-gesture-handler';
+import React from "react";
+import {
+    StyleSheet,
+    SafeAreaView,
+    View,
+    Text,
+    TouchableOpacity,
+    Image,
+    Animated
+} from "react-native";
+import { isIphoneX } from 'react-native-iphone-x-helper'
 
-const ChairDetails = ({navigation, route}) => {
-  const item = route.params;
+import { icons, COLORS, SIZES, FONTS } from '../constants'
 
-  return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{
-        backgroundColor: COLORS.white,
-        paddingBottom: 20,
-      }}>
+const ChairDetails = ({ navigation, route }) => {
 
-      </ScrollView>
-);
+    const scrollX = new Animated.Value(0);
+    const [chairbrands, setChairbrands] = React.useState(null);
 
-};
+    React.useEffect(() => {
+        let { item } = route.params;
 
-export default ChairDetails;
+        setChairbrands(item)
+    })
+
+}
